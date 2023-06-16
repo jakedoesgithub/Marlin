@@ -298,7 +298,7 @@
  * THERMAL_PROTECTION_HYSTERESIS and/or THERMAL_PROTECTION_PERIOD
  */
 #if ENABLED(THERMAL_PROTECTION_HOTENDS)
-#define THERMAL_PROTECTION_PERIOD 40    // Seconds
+#define THERMAL_PROTECTION_PERIOD 30    // Seconds
 #define THERMAL_PROTECTION_HYSTERESIS 4 // Degrees Celsius
 
 //#define ADAPTIVE_FAN_SLOWING              // Slow part cooling fan if temperature drops
@@ -533,7 +533,7 @@
  * The fan turns on automatically whenever any driver is enabled and turns
  * off (or reduces to idle speed) shortly after drivers are turned off.
  */
-//#define USE_CONTROLLER_FAN
+#define USE_CONTROLLER_FAN
 #if ENABLED(USE_CONTROLLER_FAN)
 //#define CONTROLLER_FAN_PIN -1           // Set a custom pin for the controller fan
 //#define CONTROLLER_FAN_USE_Z_ONLY       // With this option only the Z axis is considered
@@ -2101,7 +2101,7 @@
 #define LIN_ADVANCE
 #if ENABLED(LIN_ADVANCE)
 #define EXTRA_LIN_ADVANCE_K // Add a second linear advance constant, configurable with M900.
-#define LIN_ADVANCE_K 0.22  // Unit: mm compression per 1mm/s extruder speed
+#define LIN_ADVANCE_K 0.035  // Unit: mm compression per 1mm/s extruder speed
 //#define LA_DEBUG            // Print debug information to serial during operation. Disable for production use.
 //#define EXPERIMENTAL_SCURVE // Allow S-Curve Acceleration to be used with LA.
 //#define ALLOW_LOW_EJERK     // Allow a DEFAULT_EJERK value of <10. Recommended for direct drive hotends.
